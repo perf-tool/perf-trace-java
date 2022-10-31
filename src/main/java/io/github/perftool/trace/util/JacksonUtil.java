@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.extern.slf4j.Slf4j;
 
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @Slf4j
@@ -17,6 +18,15 @@ public class JacksonUtil {
 
     static {
         MAPPER.configure(DeserializationFeature.FAIL_ON_IGNORED_PROPERTIES, false);
+    }
+
+    public static byte[] toBytes(Object o) {
+        try {
+            return MAPPER.writeValueAsBytes(o);
+        } catch (Exception e) {
+            log.error("json process error, exception is ", e);
+        }
+        return "".getBytes(StandardCharsets.UTF_8);
     }
 
     public static String toJson(Object o) {

@@ -8,7 +8,7 @@ import io.github.perftool.trace.report.redis.RedisTraceReporter;
 
 public class ReportUtil {
 
-    public ITraceReporter getReporter() {
+    public static ITraceReporter getReporter() {
         String type = System.getenv("TRACE_REPORT_TYPE");
         return switch (type) {
             case "MONGO" -> new RedisTraceReporter(RedisConfig.fromEnv());
