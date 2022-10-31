@@ -6,7 +6,7 @@
 
     <groupId>io.github.perf-tool</groupId>
     <artifactId>perf-trace</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -189,9 +189,9 @@
         </plugins>
     </build>
 
-    <name>Embedded redis</name>
-    <description>easy to embedded redis, typically used in unit test</description>
-    <url>https://github.com/embedded-middleware/embedded-redis-java/</url>
+    <name>Perf trace</name>
+    <description>Perf trace library</description>
+    <url>https://github.com/perf-tool/perf-trace-java</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -200,8 +200,8 @@
     </licenses>
 
     <organization>
-        <name>embedded-middleware</name>
-        <url>https://github.com/embedded-middleware</url>
+        <name>perf-tool</name>
+        <url>https://github.com/perf-tool</url>
     </organization>
 
     <developers>
