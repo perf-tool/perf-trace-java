@@ -6,7 +6,7 @@
 
     <groupId>io.github.perf-tool</groupId>
     <artifactId>perf-trace</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -14,8 +14,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <src.dir>src/main/java</src.dir>
         <!-- dependency -->
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <jackson.version>2.13.4</jackson.version>
         <junit.version>5.9.1</junit.version>
+        <lettuce.version>6.2.1.RELEASE</lettuce.version>
         <log4j.version>2.17.2</log4j.version>
+        <mongo.version>3.12.11</mongo.version>
         <slf4j.version>1.7.36</slf4j.version>
         <!-- plugin -->
         <compiler-plugin.version>3.10.1</compiler-plugin.version>
@@ -35,6 +39,31 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>${lettuce.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>${mongo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
