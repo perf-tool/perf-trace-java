@@ -6,7 +6,7 @@
 
     <groupId>io.github.perf-tool</groupId>
     <artifactId>perf-trace</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -15,7 +15,7 @@
         <src.dir>src/main/java</src.dir>
         <!-- dependency -->
         <commons-lang3.version>3.12.0</commons-lang3.version>
-        <jackson.version>2.13.4</jackson.version>
+        <jackson.version>2.14.0</jackson.version>
         <junit.version>5.9.1</junit.version>
         <lettuce.version>6.2.1.RELEASE</lettuce.version>
         <log4j.version>2.17.2</log4j.version>
