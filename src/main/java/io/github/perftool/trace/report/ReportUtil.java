@@ -16,11 +16,15 @@ public class ReportUtil {
         return scene + System.currentTimeMillis() + "-" + IpUtil.formattedIp();
     }
 
+    public static String spanIdPrefix() {
+        return scene + System.currentTimeMillis() + "-" + IpUtil.formattedIp();
+    }
+
     public static ITraceReporter getReporter() {
         String type = System.getenv("TRACE_REPORT_TYPE");
         return switch (type) {
-            case "MONGO" -> new RedisTraceReporter(RedisConfig.fromEnv());
-            case "REDIS" -> new MongoTraceReporter(MongoConfig.fromEnv());
+            case "MONGO" -> new MongoTraceReporter(MongoConfig.fromEnv());
+            case "REDIS" -> new RedisTraceReporter(RedisConfig.fromEnv());
             default -> new NoopReporter();
         };
     }
