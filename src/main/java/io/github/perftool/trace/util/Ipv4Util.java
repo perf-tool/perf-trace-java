@@ -3,6 +3,7 @@ package io.github.perftool.trace.util;
 import io.github.perftool.trace.module.network.IfCfg;
 import io.github.perftool.trace.module.network.VirtualIfCfg;
 import lombok.extern.slf4j.Slf4j;
+import org.jetbrains.annotations.NotNull;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -17,7 +18,7 @@ import java.util.Set;
 @Slf4j
 public class Ipv4Util {
 
-    public static String getIp(String eth) {
+    public static String getIp(@NotNull String eth) {
         String[] split = eth.split(":");
         if (split.length == 0) {
             throw new IllegalArgumentException("Not correct eth format");

@@ -1,8 +1,10 @@
 package io.github.perftool.trace.util;
 
+import org.jetbrains.annotations.NotNull;
+
 public class StringTool {
 
-    public static String formatIp(String ip) {
+    public static String formatIp(@NotNull String ip) {
         StringBuilder builder = new StringBuilder();
         String[] array = ip.split("\\.");
         for (String segment : array) {
