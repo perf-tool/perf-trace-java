@@ -21,7 +21,7 @@ public class ReportUtil {
     }
 
     public static ITraceReporter getReporter() {
-        String type = System.getenv("TRACE_REPORT_TYPE");
+        String type = EnvUtil.getString("TRACE_REPORT_TYPE", "NOOP");
         return switch (type) {
             case "MONGO" -> new MongoTraceReporter(MongoConfig.fromEnv());
             case "REDIS" -> new RedisTraceReporter(RedisConfig.fromEnv());
